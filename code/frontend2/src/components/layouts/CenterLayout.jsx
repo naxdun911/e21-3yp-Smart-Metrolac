@@ -35,8 +35,11 @@ function CenterLayout({ children }) {
   }
 
   const sidebarHeaderStyle = {
-    padding: '1.5rem 1.25rem 1rem',
+    padding: '20px',
     borderBottom: '1px solid rgba(255,255,255,0.15)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 
   const appNameStyle = {

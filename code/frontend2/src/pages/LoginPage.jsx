@@ -161,6 +161,7 @@ function LoginPage() {
         <h1 style={headingStyle}>Smart-Metrolac</h1>
         <p style={subheadingStyle}>Sign in to your account</p>
 
+<<<<<<< HEAD
         <form onSubmit={handleSubmit} noValidate>
           <label style={labelStyle} htmlFor="username">Username</label>
           <input
@@ -171,6 +172,86 @@ function LoginPage() {
             onChange={(e) => setUsername(e.target.value)}
             autoComplete="username"
             required
+=======
+      {/* ── LEFT PANEL ── 55% on lg, hidden on mobile */}
+      <div
+        className="hidden lg:flex lg:w-[55%] relative overflow-hidden"
+        style={{
+          backgroundImage: 'url(/logo-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Dark overlay */}
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1, backgroundColor: 'rgba(0,0,0,0.55)' }} />
+
+        {/* Content — flex column fills full height */}
+        <div
+          className="relative flex flex-col w-full"
+          style={{ zIndex: 10, padding: '48px' }}
+        >
+          {/* TOP: Logo only */}
+          <div className="flex items-center">
+            <img src="/logo.png" alt="Smart-Metrolac" style={{ height: '56px', width: 'auto' }} />
+          </div>
+
+          {/* MIDDLE: Tagline, vertically centred */}
+          <div className="flex-1 flex items-center">
+            <div>
+              <h1
+                className="text-5xl font-bold text-white leading-tight max-w-md"
+              >
+                Precision measurement for Sri Lanka's rubber industry
+              </h1>
+              <p className="text-base mt-4 max-w-sm" style={{ color: '#97C459' }}>
+                Replacing 50 years of manual hydrometers with IoT-powered Dry Rubber Content analysis
+              </p>
+            </div>
+          </div>
+
+          {/* BOTTOM: Stats row */}
+          <div className="flex gap-8">
+            <div>
+              <div
+                className="text-xs uppercase tracking-wide"
+                style={{ color: '#97C459' }}
+              >
+                Accuracy
+              </div>
+              <div className="text-base font-bold text-white">±0.5% DRC</div>
+            </div>
+            <div>
+              <div
+                className="text-xs uppercase tracking-wide"
+                style={{ color: '#97C459' }}
+              >
+                Reading time
+              </div>
+              <div className="text-base font-bold text-white">Under 30s</div>
+            </div>
+            <div>
+              <div
+                className="text-xs uppercase tracking-wide"
+                style={{ color: '#97C459' }}
+              >
+                Connection
+              </div>
+              <div className="text-base font-bold text-white">Cloud-synced</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── RIGHT PANEL ── 45% on lg, full width on mobile */}
+      <div className="w-full lg:w-[45%] flex items-center justify-center bg-white">
+        <div className="w-full max-w-sm" style={{ padding: '48px 40px' }}>
+
+          {/* Mobile-only logo */}
+          <img
+            src="/logo.png"
+            alt="Smart-Metrolac"
+            className="h-10 w-auto mx-auto mb-8 lg:hidden"
+>>>>>>> 0a8e069 (logo updated)
           />
 
           <label style={labelStyle} htmlFor="password">Password</label>
